@@ -50,9 +50,7 @@ import random
 
 secret_number = random.randint(1, 100)
 attempts = 0
-
 print("🎮 Game: Guess the number (between 1 and 100)")
-
 while True:
     guess = int(input("Enter your guess: "))
     attempts += 1
@@ -65,4 +63,30 @@ while True:
         print(f"🎉 Congratulations! You guessed the number {secret_number} in {attempts} attempts!")
         break
 
+
+Game#3
+
+import random
+
+score = 0
+print("Math Trainer — 10 questions")
+for i in range(10):
+    num1 = random.randint(1, 50)
+    num2 = random.randint(1, 50)
+    operator = random.choice(["+", "-"])
+
+    if operator == "+":
+        correct = num1 + num2
+    else:
+        correct = num1 - num2
+
+    answer = int(input(f"{i+1}) What is {num1} {operator} {num2}? "))
+
+        if answer == correct:
+        print("✅ Correct!")
+        score += 1
+    else:
+        print(f"❌ Wrong. The correct answer was {correct}.")
+
+print(f"\n🎉 You got {score} out of 10 correct!")
 
